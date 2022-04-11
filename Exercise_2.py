@@ -29,8 +29,11 @@ def circumference(a, b , n):
         point = ellipse(a, b, (p/n)*2*math.pi)
         points.append(point)
 
-    for q in range(n-1):
-        total_l += length(points[q][0], points[q][1], points[q + 1][0], points[q + 1][1])   
+    for q in range(n):
+        if q < n - 1:
+            total_l += length(points[q][0], points[q][1], points[q + 1][0], points[q + 1][1])
+        else:
+            total_l += length(points[q][0], points[q][1], points[0][0], points[0][1])
 
     return total_l
 
@@ -40,14 +43,14 @@ if __name__ == "__main__":
     a = int(input("please insert axis b:\n"))
     b = int(input("please insert axis a:\n"))
     epsilon = float(input("please insert precision e:\n"))
-    n = 2
+    n = 4
 
     # we iterate until we get the desired result
     while True:
         c_n = circumference(a,b, n)
         c_n_2 = circumference(a,b, n*2)
-        print(f"current value of the circumference perimeter:  {c_n}")
-        accu = (c_n - c_n_2)/ c_n
+        accu = abs((c_n - c_n_2)/ c_n)
+        print(f"current value of the circumference perimeter: {c_n} accuracy: {accu*100}%")
         if abs(accu) < epsilon:
             break
         n *= 2
