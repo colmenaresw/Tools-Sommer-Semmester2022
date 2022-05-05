@@ -1,0 +1,56 @@
+Wilfredo Colmenares
+Computer Simulation in Science
+Sommer Semester 2022
+2130541
+exercise 7
+
+a) \D1\W\dz
+
+    A1;1z
+    W1.6z
+    p1,9z
+
+b) ^45+6*7$
+
+    456667
+    45567
+    45566667
+
+
+c) ^ef{3,4}g?h$
+
+    efffgh
+    effffgh
+    efffh
+
+
+d) ^(A|BB)C(DDD|EEEEE)$
+
+    ACDDD
+    BBCDDD
+    ACEEEEE
+
+
+e) ^[^987]+[963]$
+
+    123
+    13
+    533
+
+f) ^.\b\w+\b.$
+
+    "hello"
+    ,goodbye.
+    .but.
+
+g) ^(\w+):\1$
+
+    hola:hola
+    chao:chao
+    papalote:papalote
+
+h) ^(\d)(?:\d)(\d+):\2\1$
+
+    123:31
+    456:64
+    987:79
